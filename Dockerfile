@@ -4,3 +4,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 CMD ["python", "jobs/load_users.py"]
+
+
+# Security Fix by BuildGuard
+USER nonroot
